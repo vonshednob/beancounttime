@@ -1,0 +1,5 @@
+recursive-include beancounttime *.py
+include README.md
+include LICENSE
+include setup.py
+
