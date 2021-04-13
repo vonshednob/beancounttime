@@ -13,7 +13,7 @@ def convert_to_decimal_time(value):
     factor = Decimal(100/60.)
     hours = value.to_integral_value(rounding=decimal.ROUND_DOWN)
     minutes = value - hours
-    return Decimal(hours + minutes*factor))
+    return Decimal(hours + minutes*factor)
 
 
 def mangle_time(entries, options_map, conf=None):
