@@ -46,6 +46,7 @@ if __name__ == '__main__':
     assert convert_to_decimal_time(Decimal(1.15)) - Decimal(1.25) < Decimal(0.001)
     assert convert_to_decimal_time(Decimal(1.30)) - Decimal(1.5) < Decimal(0.001)
     assert convert_to_decimal_time(Decimal(0.55)) + convert_to_decimal_time(Decimal(0.05)) - Decimal(1) < Decimal(0.001)
+    assert convert_to_decimal_time(Decimal(-1.57)) + convert_to_decimal_time(Decimal(-0.03)) + Decimal(2) < Decimal(0.001)
 
     entries, errors, options = loader.load_string("""
 2010-01-01 open Equity:Time HR
