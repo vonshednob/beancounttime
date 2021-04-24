@@ -5,14 +5,15 @@ After installing through `pip`, like this
 
     $ pip install beancounttime
 
-you can use this plugin in your time tracking files like this:
+you can use the plugin in beancount to track time like this:
 
     ;; timetracking.beancount
     plugin "beancounttime.time"  "HR"
 
-    1900-01-01 open Equity:Universe  HR
-    1900-01-01 open Expenses:Work    HR
-    1900-01-01 open Assets:Overtime  HR
+    1900-01-01 open Equity:Universe        HR
+    1900-01-01 open Expenses:Work          HR
+    1900-01-01 open Expenses:Work:Hacking  HR
+    1900-01-01 open Expenses:Work:Meeting  HR
 
     2000-01-01 * ""
       Expenses:Work:Hacking   4.50 HR
@@ -25,6 +26,6 @@ with it.
 
 E.g. `3.30 HR` (3 hours, 30 minutes) will be converted to `3.50 HR`.
 
-The plugin will only apply the conversion to transactions with the currency
+The plugin will only apply the conversion to transactions with the commodity
 that is passed as a parameter to the plugin (in the example `HR`).
 
